@@ -5,6 +5,7 @@ var a = 123213
 defineProps<{ msg: string }>()
 console.log(1111111)
 console.log(import.meta.env)
+const b = import.meta.env.VITE_TEST // vite-env.d.ts中声明过了
 
 const count = ref(0)
 </script>
