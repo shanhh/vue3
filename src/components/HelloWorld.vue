@@ -4,6 +4,7 @@ var a = 123213
 
 defineProps<{ msg: string }>()
 console.log(1111111)
+console.log(import.meta.env)
 
 const count = ref(0)
 </script>
