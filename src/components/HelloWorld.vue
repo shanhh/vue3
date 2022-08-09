@@ -7,6 +7,13 @@ console.log(1111111)
 console.log(import.meta.env)
 const b = import.meta.env.VITE_TEST // vite-env.d.ts中声明过了
 
+const globModules = import.meta.glob('./../glob/*')
+const globModules2 = import.meta.glob('./../glob/*', { eager: true })
+console.log(globModules, globModules2, 1111111)
+Object.entries(globModules).forEach(([k, v]) => {
+  console.log(k + ':', v, 2222222222)
+  console.log(v().then((item) => console.log(item)))
+})
 const count = ref(0)
 </script>
 
